@@ -98,6 +98,12 @@ form .submit-button:hover {
   border-left: 3px solid var(--bluish-color);
   width: fit-content;
   margin: 20px auto 0;
+  text-align: left;
+}
+
+.poem .sign {
+  color: var(--bluish-color);
+  margin-top: 20px;
 }
 
 footer {
@@ -109,4 +115,5 @@ footer {
 
 a {
   color: var(--bluish-color);
+  text-decoration: none;
 }
