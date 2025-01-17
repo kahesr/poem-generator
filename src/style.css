@@ -1,3 +1,112 @@
+:root {
+  --text-color: #3a5357;
+  --bluish-color: #5e8386;
+  --light-green-color: #b0b69c;
+  --gray-color: #8b978e;
+  --gray-color-border: rgba(139, 151, 142, 0.4);
+  --creamy-color: #f4f5f8;
+  --background-color: rgba(243, 244, 247, 0.5);
+}
+
 body {
+  font-family: "Dancing Script", serif;
   text-align: center;
+  color: var(--text-color);
+  font-size: 25px;
+  background: radial-gradient(
+    circle,
+    rgba(139, 151, 142, 0.4) 10%,
+    #f4f5f8 90%
+  );
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  background-position-x: center;
+  background-position-y: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/155/066/original/flower.jpg?1737116540);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.container {
+  margin: 80px auto;
+  max-width: 600px;
+  background-color: var(--background-color);
+  padding: 40px;
+  border-radius: 40px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+h1 {
+  font-size: 45px;
+  font-weight: 800;
+  margin: 0 0 30px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+form input {
+  padding: 15px 20px;
+  border: 1px solid var(--gray-color-border);
+  background-color: var(--creamy-color);
+}
+
+form input::placeholder {
+  color: var(--gray -color);
+  opacity: 0.5;
+}
+
+form .input-text {
+  border-radius: 50px 0 0 50px;
+  width: 50%;
+  margin-right: 10px;
+}
+
+form .submit-button {
+  border-radius: 0 50px 50px 0;
+  background-color: rgba(94, 131, 134, 0.5);
+  color: var(--creamy-color);
+  width: 20%;
+}
+
+form .input-text:focus {
+  outline: none;
+  border: 1px solid var(--gray-color);
+}
+
+form .submit-button:hover {
+  border: 1px solid rgba(94, 131, 134, 0.6);
+  background-color: rgba(94, 131, 134, 0.6);
+  cursor: pointer;
+  box-shadow: rgba(139, 151, 142, 0.2) 1.95px 1.95px 2.6px;
+  transition: all 200ms ease-in-out;
+}
+
+.poem {
+  padding: 0 20px;
+  border-left: 3px solid var(--bluish-color);
+  width: fit-content;
+  margin: 20px auto 0;
+}
+
+footer {
+  border-top: 1px solid var(--gray-color-border);
+  margin-top: 30px;
+  font-size: 18px;
+  padding-top: 10px;
+}
+
+a {
+  color: var(--bluish-color);
 }
