@@ -61,6 +61,7 @@ form input {
   padding: 15px 20px;
   border: 1px solid var(--gray-color-border);
   background-color: var(--creamy-color);
+  font-size: 14px;
 }
 
 form input::placeholder {
@@ -72,6 +73,7 @@ form .input-text {
   border-radius: 50px 0 0 50px;
   width: 80%;
   margin-right: 10px;
+  color: var(--bluish-color);
 }
 
 form .submit-button {
@@ -130,6 +132,7 @@ footer .emoji {
 a {
   color: var(--bluish-color);
   text-decoration: none;
+  font-weight: bolder;
 }
 
 .blink {
