@@ -19,6 +19,8 @@ function generatePoem(event) {
   let prompt = `User instruction: Please generate a french poem about ${subject}. Also, put the subject word between <strong> tag.`;
   let apiUrl = `${apiBase}?prompt=${prompt}&context=${context}&key=${apiKey}`;
   let poemElement = document.querySelector("#poem");
+
+  poemElement.classList.remove("hidden");
   poemElement.innerHTML = `<span class="blink">⌛</span> Generating a French peom about ${subject}...`;
 
   axios.get(apiUrl).then(displayPoem);

@@ -6,6 +6,7 @@
   --gray-color-border: rgba(139, 151, 142, 0.4);
   --creamy-color: #f4f5f8;
   --background-color: rgba(243, 244, 247, 0.5);
+  --button-color: rgba(94, 131, 134, 0.5);
 }
 
 body {
@@ -33,7 +34,7 @@ body::before {
   background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/155/066/original/flower.jpg?1737116540);
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.4;
+  opacity: 0.2;
   z-index: -1;
 }
 
@@ -78,7 +79,7 @@ form .input-text {
 
 form .submit-button {
   border-radius: 0 50px 50px 0;
-  background-color: rgba(94, 131, 134, 0.5);
+  background-color: var(--button-color);
   color: var(--creamy-color);
   text-transform: uppercase;
   width: 20%;
@@ -117,11 +118,13 @@ form .submit-button:hover {
   color: var(--bluish-color);
 }
 
+.hidden {
+  display: none;
+}
+
 footer {
-  border-top: 1px solid var(--gray-color-border);
-  margin-top: 30px;
+  margin-top: 20px;
   font-size: 18px;
-  padding-top: 10px;
   color: rgba(58, 83, 87, 0.6);
 }
 
@@ -142,5 +145,41 @@ a {
 @keyframes blinker {
   50% {
     opacity: 0;
+  }
+}
+
+::selection {
+  color: var(--creamy-color);
+  background: var(--button-color);
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: var(--creamy-color);
+  background: var(--button-color);
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  form input {
+    padding: 10px;
+  }
+
+  form .input-text {
+    border-radius: 10px 0 0 10px;
+    width: 60%;
+  }
+
+  form .submit-button {
+    border-radius: 0 10px 10px 0;
+    width: 40%;
+  }
+
+  footer {
+    font-size: 14px;
   }
 }
