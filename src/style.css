@@ -11,6 +11,7 @@
 body {
   font-family: "Dancing Script", serif;
   text-align: center;
+  margin: 80px 20px;
   color: var(--text-color);
   font-size: 25px;
   background: radial-gradient(
@@ -37,10 +38,10 @@ body::before {
 }
 
 .container {
-  margin: 80px auto;
+  margin: 0 auto;
   max-width: 600px;
   background-color: var(--background-color);
-  padding: 40px;
+  padding: 40px 70px;
   border-radius: 40px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
@@ -69,7 +70,7 @@ form input::placeholder {
 
 form .input-text {
   border-radius: 50px 0 0 50px;
-  width: 50%;
+  width: 80%;
   margin-right: 10px;
 }
 
@@ -77,6 +78,7 @@ form .submit-button {
   border-radius: 0 50px 50px 0;
   background-color: rgba(94, 131, 134, 0.5);
   color: var(--creamy-color);
+  text-transform: uppercase;
   width: 20%;
 }
 
@@ -93,17 +95,24 @@ form .submit-button:hover {
   transition: all 200ms ease-in-out;
 }
 
+.hint {
+  color: var(--bluish-color);
+  text-align: left;
+  font-size: 16px;
+  opacity: 0.6;
+  margin-top: 10px;
+}
+
 .poem {
   padding: 0 20px;
   border-left: 3px solid var(--bluish-color);
   width: fit-content;
-  margin: 20px auto 0;
+  margin-top: 20px;
   text-align: left;
 }
 
 .poem .sign {
   color: var(--bluish-color);
-  margin-top: 20px;
 }
 
 footer {
@@ -111,9 +120,24 @@ footer {
   margin-top: 30px;
   font-size: 18px;
   padding-top: 10px;
+  color: rgba(58, 83, 87, 0.6);
+}
+
+footer .emoji {
+  color: var(--text-color);
 }
 
 a {
   color: var(--bluish-color);
   text-decoration: none;
+}
+
+.blink {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
