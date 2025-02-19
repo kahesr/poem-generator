@@ -23,7 +23,14 @@ function generatePoem(event) {
   poemElement.classList.remove("hidden");
   poemElement.innerHTML = `<span class="blink">⌛</span> Generating a French peom about ${subject}...`;
 
-  axios.get(apiUrl).then(displayPoem);
+  axios
+    .get(apiUrl)
+    .then((res) => {
+      displayPoem(res);
+    })
+    .catch((error) => {
+      alert(error);
+    });
 }
 
 let poemFormElement = document.querySelector("#peom-generator-form");

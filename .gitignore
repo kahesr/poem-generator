@@ -1,0 +1,5 @@
+# directories to exclude from git
+node_modules
+# This file may be commited to git, in order to install npm dependencies faster using `npm ci`. 
+# It includes resolved version and dependencies of all project dependencies
+package-lock.json
